@@ -6,14 +6,13 @@ annee = int(annee)
 
 #print(type(annee))
 bissextile = False
-if annee % 4 == 0:
-	if annee % 100 == 0:
-		if annee % 400 == 0:
-			bissextile = False
-	else :
-		bissextile = True
+
+if annee % 400 == 0 or (annee % 4 == 0 and annee % 100 != 0):
+	bissextile=True
 
 if bissextile:
-	print(annee, " est pas bissextile. \n")
+	print(annee, " est bissextile. \n")
 else:
 	print(annee, " n'est pas bissextile. \n")
+
+
